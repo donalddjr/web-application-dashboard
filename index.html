@@ -1,0 +1,508 @@
+<!doctype html>
+<html>
+<head>
+    <title>[Lab] Web Application Dashboard Page</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-cyan-900 text-cyan-200 font-sans py-4">
+        <!-- container -->
+        <div class="w-auto 2xl:container md:mx-auto md:flex md:justify-between items-center">
+            <!-- toggle & logo -->
+            <div class="p-2.5 flex justify-between items-center">
+                <a href="index.html" class="block text-2xl tracking-wider uppercase hover:text-yellow-200">
+                    <h1>Dashboard</h1>
+                </a>
+                <button class="md:hidden rounded focus:outline-none focus:ring focus:ring-amber-300">
+                    <svg class="fill-current w-12 h-12 hover:text-yellow-200" viewbox="0 0 100 80">
+                        <rect width="100" height="20" rx="8"></rect>
+                        <rect width="100" height="20" rx="10" y="30"></rect>
+                        <rect width="100" height="20" rx="10" y="60"></rect>
+                    </svg>
+                </button>
+            </div>
+            <!-- Navigation -->
+            <nav class="mt-8 md:mt-0">
+                <ul class="md:flex">
+                    <li class="leading-10 border-t-2 border-cyan-300  md:border-t-0 hover:shadow-teal-500 md:hover:shadow-lg"> <a class="flex py-2 px-4 tracking-wider rounded hover:ring-2 hover:ring-teal-300 hover:bg-teal-500" href="#">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
+                        Notifications
+                        <span class="relative flex place-content-center h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-200 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-yellow-400"></span>
+                          </span>
+                    </a></li>
+                    <li class="leading-10 border-t-2 border-cyan-300  md:border-t-0 hover:shadow-teal-500 md:hover:shadow-lg"><a class="flex py-2 px-4 tracking-wider rounded hover:ring-2 hover:ring-teal-300 hover:bg-teal-500" href="#">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V8a2 2 0 00-2-2h-5L9 4H4zm7 5a1 1 0 00-2 0v1H8a1 1 0 000 2h1v1a1 1 0 002 0v-1h1a1 1 0 000-2h-1V9z" fill-rule="evenodd"></path></svg>
+                        Add New Project</a> </li>
+                    <li class="leading-10 border-t-2 border-cyan-300  md:border-t-0 hover:shadow-teal-500 md:hover:shadow-lg"><a class="flex py-2 px-4 tracking-wider rounded hover:ring-2 hover:ring-teal-300 hover:bg-teal-500" href="#">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z" clip-rule="evenodd"></path></svg>
+                        Messages</a> </li>
+                    <li class="leading-10 border-t-2 border-cyan-300  md:border-t-0 hover:shadow-teal-500 md:hover:shadow-lg"><a class="flex py-2 px-4 tracking-wider rounded hover:ring-2 hover:ring-teal-300 hover:bg-teal-500" href="#">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+                        Settings</a> </li>                  
+                    <li class="leading-10 border-t-2 border-cyan-300  md:border-t-0 hover:shadow-teal-500 md:hover:shadow-lg"><a class="flex py-2 px-4 tracking-wider rounded hover:ring-2 hover:ring-teal-300 hover:bg-teal-500" href="#">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
+                        Account</a> </li>
+                    <li class="leading-10 border-t-2 border-cyan-300  md:border-t-0 hover:shadow-teal-500 md:hover:shadow-lg"><a class="flex py-2 px-4 tracking-wider rounded hover:ring-2 hover:ring-teal-300 hover:bg-teal-500" href="#">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                        Sign-out</a> </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <div class="xl:container mx-auto px-4 py-4 xl:px-0">
+
+        <!-- Project Section -->
+        <div class="bg-slate-100 rounded-lg p-5 m-5">
+            <!-- PROJECT SECTION -->
+            <div class="flex items-center mt-2 pt-2 mb-2 pb-2">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                  <h2 class="text-2xl ml-1">PROJECTS: </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 ">
+                <!-- card 1 -->
+                <section class="bg-white rounded border-2 border-teal-300 p-4 shadow-teal-600/30">
+                    <header class="border-b-2 border-slate-400 pb-2 mb-2">
+                        <div class="flex items-center mb-4">
+                            <!-- profile -->
+                            <div class="rounded-full w-12 h-12 bg-yellow-400 mr-2"> </div>
+                            <h2 class="text-2xl">Ride Revolution Website</h2>
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <ul class="flex gap-x-2.5 grow border-b-2 border-slate-400 pb-2 mb-2">
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Edit</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Archive</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-red-300 hover:bg-red-500" " href="#">Delete</a></li>
+                        </ul>
+
+                        <!-- Progress bar -->
+                        <div class="mb-5">
+                            <div class="mb-1 text-base uppercase font-medium text-yellow-700 dark:text-yellow-500">task in progress:</div>    
+                            <div class="w-full bg-gray-200 rounded-full light:bg-gray-700">
+                                <div class="bg-yellow-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Details -->
+                        <ul class="gap-x-2.5 grow">
+                            <li><a class="block uppercase border-t-2 border-slate-400 pt-2 mt-2 text-base font-medium text-yellow-700 dark:text-yellow-500" href="#">Start Date:</a> October 26, 2022</li>
+                            <li><a class="block uppercase text-base font-medium text-yellow-700 dark:text-yellow-500" href="#">End Date:</a>August 10, 2023</li>
+                            <li><a class="block border-t-2 border-slate-400 pt-2 mt-2" href="#">1 PDF Attachment</a></li>
+                            <li><a class="block border-t-2 border-slate-400 pt-2 mt-2" href="#">9 Teams Members</a></li>
+                            <li><a class="block border-t-2 border-slate-400 pt-2 mt-2" href="#">18 Comments</a></li>
+                        </ul>
+                    </header>
+                    <div class="">
+                        <h2 class="mb-1 text-base font-medium text-black">Description:</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sint similique consectetur deleniti debitis, officiis obcaecati tempore odit ipsum. Aperiam, dolor animi corrupti facilis eius debitis cupiditate vel itaque eligendi?</p>
+                    </div>
+
+                    <!-- Comments -->
+                    <div id="toast-notification" class="p-4 m-4 w-full max-w-xs text-gray-900 bg-white rounded-lg shadow dark:bg-gray-100 dark:text-gray-700" role="alert">
+                        <div class="flex items-center mb-3">
+                            <span class="mb-1 text-sm font-semibold text-gray-900 dark:text-black">Most Recent Comment</span>
+                            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-100 dark:hover:bg-gray-700" data-dismiss-target="#toast-notification" aria-label="Close">
+                                <span class="sr-only">Close</span>
+                                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="inline-block relative shrink-0">
+                                <img class="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/200" alt="Avatar of User"> 
+                                <span class="inline-flex absolute right-0 bottom-0 justify-center items-center w-6 h-6 bg-gray-600 rounded-full">
+                                    <svg aria-hidden="true" class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                                    <span class="sr-only">Message icon</span>
+                                </span>
+                            </div>
+                            <div class="ml-3 text-sm font-normal">
+                                <div class="text-sm font-semibold text-gray-900 dark:text-black">Tulashi Bajgai</div>
+                                <div class="text-sm font-normal">I've added images in the gallery.</div> 
+                                <span class="text-xs font-medium text-black dark:text-black">a few seconds ago</span>   
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+
+                <!-- card 2 -->
+                <section class="bg-white rounded border-2 border-teal-300 p-4 shadow-teal-600/30">
+                    <header class="border-b-2 border-slate-400 pb-2 mb-2">
+                        <div class="flex items-center mb-4">
+                            <!-- profile -->
+                            <div class="rounded-full w-12 h-12 bg-red-400 mr-2"> </div>
+                            <h2 class="text-2xl">Skoop Rebranding</h2>
+                        </div>
+                        <!-- BUTTONS -->
+                        <ul class="flex gap-x-2.5 grow border-b-2 border-slate-400 pb-2 mb-2">
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Edit</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Archive</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-red-300 hover:bg-red-500" " href="#">Delete</a></li>
+                        </ul>
+                    
+                        <!-- Progress bar -->
+                        <div class="mb-5">
+                            <div class="mb-1 text-base uppercase font-medium text-red-700 dark:text-red-500">task not started:</div>    
+                            <div class="w-full bg-gray-200 rounded-full light:bg-gray-700">
+                                <div class="bg-red-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 10%"> 0%</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Details -->
+                        <ul class="gap-x-2.5 grow">
+                            <li><a class="block uppercase border-t-2 border-slate-400 pt-2 mt-2 text-red-600" href="#">Start Date:</a> November 15, 2022</li>
+                            <li><a class="block uppercase text-red-600" href="#">End Date:</a>Sept 30, 2023</li>
+                            <li><a class="block border-t-2 border-slate-400 pt-2 mt-2" href="#">No Attachment</a></li>
+                            <li><a class="block border-t-2 border-slate-400 pt-2 mt-2" href="#">4 Teams Members</a></li>
+                            <li><a class="block border-t-2 border-slate-400 pt-2 mt-2" href="#">3 Comments</a></li>
+                        </ul>
+                    </header>
+                    <div class="">
+                        <h2 class="mb-1 text-base font-medium text-black">Description:</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sint similique consectetur deleniti debitis, officiis obcaecati tempore odit ipsum. Aperiam, dolor animi corrupti facilis eius debitis cupiditate vel itaque eligendi?</p>
+                    </div>
+
+                    <!-- Comments -->
+                    <div id="toast-notification" class="p-4 m-4 w-full max-w-xs text-gray-900 bg-white rounded-lg shadow dark:bg-gray-100 dark:text-gray-700" role="alert">
+                        <div class="flex items-center mb-3">
+                            <span class="mb-1 text-sm font-semibold text-gray-900 dark:text-black">Most Recent Comment</span>
+                            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-100 dark:hover:bg-gray-700" data-dismiss-target="#toast-notification" aria-label="Close">
+                                <span class="sr-only">Close</span>
+                                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="inline-block relative shrink-0">
+                                <img class="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of User"> 
+                                <span class="inline-flex absolute right-0 bottom-0 justify-center items-center w-6 h-6 bg-gray-600 rounded-full">
+                                    <svg aria-hidden="true" class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                                    <span class="sr-only">Message icon</span>
+                                </span>
+                            </div>
+                            <div class="ml-3 text-sm font-normal">
+                                <div class="text-sm font-semibold text-gray-900 dark:text-black">Daisuke Sato</div>
+                                <div class="text-sm font-normal">I can't wait to start this!</div> 
+                                <span class="text-xs font-medium text-black dark:text-black">Date: October 28, 2022</span>   
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- card 3 -->
+                <section class="bg-white rounded border-2 border-teal-300 p-4 shadow-teal-600/30">
+                    <header class="border-b-2 border-slate-400 pb-2 mb-2">
+                        <div class="flex items-center mb-4">
+                            <!-- profile -->
+                            <div class="rounded-full w-12 h-12 bg-red-400 mr-2"> </div>
+                            <h2 class="text-2xl">NAIT-SA Website Redesign</h2>
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <ul class="flex gap-x-2.5 grow border-b-2 border-slate-400 pb-2 mb-2">
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Edit</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Archive</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-red-300 hover:bg-red-500" " href="#">Delete</a></li>
+                        </ul>
+
+                        <!-- Progress bar -->
+                        <div class="mb-5">
+                            <div class="mb-1 text-base uppercase font-medium text-red-700 dark:text-red-500">Task not started:</div>    
+                            <div class="w-full bg-gray-200 rounded-full light:bg-gray-700">
+                                <div class="bg-red-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 10%"> 0%</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Details -->
+                        <ul class="gap-x-2.5 grow">
+                            <li><a class="block uppercase border-t-2 border-slate-400 pt-2 mt-2 text-red-600" href="#">Start Date:</a> December 3, 2022</li>
+                            <li><a class="block uppercase text-red-600" href="#">End Date:</a>May 28, 2023</li>
+                            <li><a class="block border-t-2 border-slate-400 pt-2 mt-2" href="#">1 PDF Attachment</a></li>
+                            <li><a class="block border-t-2 border-slate-400 pt-2 mt-2" href="#">9 Teams Members</a></li>
+                            <li><a class="block border-t-2 border-slate-400 pt-2 mt-2" href="#">18 Comments</a></li>
+                        </ul>
+                    </header>
+                    <div class="">
+                        <h2 class="mb-1 text-base font-medium text-black">Description:</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sint similique consectetur deleniti debitis, officiis obcaecati tempore odit ipsum. Aperiam, dolor animi corrupti facilis eius debitis cupiditate vel itaque eligendi?</p>
+                    </div>
+                    
+                    <!-- Comments -->
+                    <div id="toast-notification" class="p-4 m-4 w-full max-w-xs text-gray-900 bg-white rounded-lg shadow dark:bg-gray-100 dark:text-gray-700" role="alert">
+                        <div class="flex items-center mb-3">
+                            <span class="mb-1 text-sm font-semibold text-gray-900 dark:text-black">Most Recent Comment</span>
+                            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-100 dark:hover:bg-gray-700" data-dismiss-target="#toast-notification" aria-label="Close">
+                                <span class="sr-only">Close</span>
+                                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="inline-block relative shrink-0">
+                                <img class="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/100" alt="Avatar of User"> 
+                                <span class="inline-flex absolute right-0 bottom-0 justify-center items-center w-6 h-6 bg-gray-600 rounded-full">
+                                    <svg aria-hidden="true" class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                                    <span class="sr-only">Message icon</span>
+                                </span>
+                            </div>
+                            <div class="ml-3 text-sm font-normal">
+                                <div class="text-sm font-semibold text-gray-900 dark:text-black">Marjorie Ann</div>
+                                <div class="text-sm font-normal">Let's make sure we keep the theme at par with the branding.</div> 
+                                <span class="text-xs font-medium text-black dark:text-black">Date: November 1 2022</span>   
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            
+
+            </div>
+        </div>
+
+        <!-- Archive Section -->
+        <div class="bg-slate-100 rounded-lg p-5 m-5">
+            <!-- ARCHIVED -->
+            <div class="flex items-center mt-2 pt-2 mb-2 pb-2">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path><path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                <h2 class="text-2xl ml-1">COMPLETED (ARCHIVED): </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 ">
+                <!-- card 1 -->
+                <section class="bg-white rounded border-2  p-4 shadow-teal-600/30">
+                    <header class="border-b-2 border-slate-400 pb-2 mb-2">
+                        <div class="flex items-center mb-4">
+                            <!-- profile -->
+                            <div class="rounded-full w-12 h-12 bg-green-400 mr-2"> </div>
+                            <h2 class="text-2xl">Vesxel Website</h2>
+                        </div>
+                        
+                        <!-- Progress bar -->
+                        <div class="mb-5">
+                            <div class="mb-1 text-base uppercase font-medium text-green-700 dark:text-green-500">Task completed:</div>    
+                            <div class="w-full bg-gray-200 rounded-full light:bg-gray-700">
+                                <div class="bg-green-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 100%"> 100%</div>
+                            </div>
+                        </div>
+
+                        <ul class="flex gap-x-2.5 grow">
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">View</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Edit</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-red-300 hover:bg-red-500" " href="#">Delete</a></li>
+                        </ul>
+                    </header>
+                    <div class="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sint similique consectetur deleniti debitis, officiis obcaecati tempore odit ipsum. Aperiam, dolor animi corrupti facilis eius debitis cupiditate vel itaque eligendi?</p>
+                    </div>
+                </section>
+
+                <!-- card 2 -->
+                <section class="bg-white rounded border-2  p-4 shadow-teal-600/30">
+                    <header class="border-b-2 border-slate-400 pb-2 mb-2">
+                        <div class="flex items-center mb-4">
+                            <!-- profile -->
+                            <div class="rounded-full w-12 h-12 bg-green-400 mr-2"> </div>
+                            <h2 class="text-2xl">Capstone 2022</h2>
+                        </div>
+                        
+                        <!-- Progress bar -->
+                        <div class="mb-5">
+                            <div class="mb-1 text-base uppercase font-medium text-green-700 dark:text-green-500">Task completed:</div>    
+                            <div class="w-full bg-gray-200 rounded-full light:bg-gray-700">
+                                <div class="bg-green-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 100%"> 100%</div>
+                            </div>
+                        </div>
+
+                        <ul class="flex gap-x-2.5 grow">
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">View</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Edit</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-red-300 hover:bg-red-500" " href="#">Delete</a></li>
+                        </ul>
+                    </header>
+                    <div class="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sint similique consectetur deleniti debitis, officiis obcaecati tempore odit ipsum. Aperiam, dolor animi corrupti facilis eius debitis cupiditate vel itaque eligendi?</p>
+                    </div>
+                </section>
+
+                <!-- card 3 -->
+                <section class="bg-white rounded border-2  p-4 shadow-teal-600/30">
+                    <header class="border-b-2 border-slate-400 pb-2 mb-2">
+                        <div class="flex items-center mb-4">
+                            <!-- profile -->
+                            <div class="rounded-full w-12 h-12 bg-green-400 mr-2"> </div>
+                            <h2 class="text-2xl">DOSC Website</h2>
+                        </div>
+                        
+                        <!-- Progress bar -->
+                        <div class="mb-5">
+                            <div class="mb-1 text-base uppercase font-medium text-green-700 dark:text-green-500">Task completed:</div>    
+                            <div class="w-full bg-gray-200 rounded-full light:bg-gray-700">
+                                <div class="bg-green-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 100%"> 100%</div>
+                            </div>
+                        </div>
+
+                        <ul class="flex gap-x-2.5 grow">
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">View</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Edit</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-red-300 hover:bg-red-500" " href="#">Delete</a></li>
+                        </ul>
+                    </header>
+                    <div class="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sint similique consectetur deleniti debitis, officiis obcaecati tempore odit ipsum. Aperiam, dolor animi corrupti facilis eius debitis cupiditate vel itaque eligendi?</p>
+                    </div>
+                </section>
+
+                <!-- card 4 -->
+                <section class="bg-white rounded border-2  p-4 shadow-teal-600/30">
+                    <header class="border-b-2 border-slate-400 pb-2 mb-2">
+                        <div class="flex items-center mb-4">
+                            <!-- profile -->
+                            <div class="rounded-full w-12 h-12 bg-green-400 mr-2"> </div>
+                            <h2 class="text-2xl">TOWN App</h2>
+                        </div>
+                        
+                        <!-- Progress bar -->
+                        <div class="mb-5">
+                            <div class="mb-1 text-base uppercase font-medium text-green-700 dark:text-green-500">Task completed:</div>    
+                            <div class="w-full bg-gray-200 rounded-full light:bg-gray-700">
+                                <div class="bg-green-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 100%"> 100%</div>
+                            </div>
+                        </div>
+
+                        <ul class="flex gap-x-2.5 grow">
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">View</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Edit</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-red-300 hover:bg-red-500" " href="#">Delete</a></li>
+                        </ul>
+                    </header>
+                    <div class="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sint similique consectetur deleniti debitis, officiis obcaecati tempore odit ipsum. Aperiam, dolor animi corrupti facilis eius debitis cupiditate vel itaque eligendi?</p>
+                    </div>
+                </section>
+
+            
+
+            </div>
+        </div>
+
+        <!-- Messages Section -->
+        <div class="bg-slate-100 rounded-lg p-5 m-5">
+
+            <div class="flex items-center mt-2 pt-2 mb-2 pb-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg> 
+                <h2 class="text-2xl ml-1">Messages: </h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 ">
+                <!-- card 1 -->
+                <section class="bg-white rounded border-2 rounded-2xl p-4 shadow-teal-600/30">
+                    <header class="border-b-2 border-slate-400 pb-2 mb-1">
+                        <div class="flex items-center mb-4">
+                            <!-- profile -->
+                            <img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/100" alt="Avatar of User"> 
+                            <h2 class="text-2xl">Marjorie Ann</h2>
+                        </div>
+                        
+                        <ul class="flex gap-x-2.5 grow">
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Reply</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Forward</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-red-300 hover:bg-red-500" " href="#">Delete</a></li>
+                        </ul>
+                    </header>
+                    <p class="text-gray-500 mb-4">Date: Sept 27, 2022</p>
+                    <div class="border-2 rounded-xl p-3 mb-3">
+                        
+                        <h3><strong>Subject: </strong>Deadline was moved to end of month</h3>
+                    </div>
+                    <div class="border-2 rounded-xl p-3">
+                        <p><strong>Message: </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sint similique consectetur deleniti debitis... <a class="hover:text-teal-600" href="#">View More</a></p>
+                    </div>
+                </section>
+
+                <!-- card 2 -->
+                <section class="bg-white rounded border-2 rounded-2xl p-4 shadow-teal-600/30">
+                    <header class="border-b-2 border-slate-400 pb-2 mb-1">
+                        <div class="flex items-center mb-4">
+                            <!-- profile -->
+                            <img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/200" alt="Avatar of User"> 
+                            <h2 class="text-2xl">Tulashi Bajgai</h2>
+                        </div>
+                        
+                        <ul class="flex gap-x-2.5 grow">
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Reply</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Forward</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-red-300 hover:bg-red-500" " href="#">Delete</a></li>
+                        </ul>
+                    </header>
+                    <p class="text-gray-500 mb-4">Date: October 07, 2022</p>
+                    <div class="border-2 rounded-xl p-3 mb-3">
+                        <h3><strong>Subject: </strong>Need some edits</h3>
+                    </div>
+                    <div class="border-2 rounded-xl p-3">
+                        <p><strong>Message: </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sint similique consectetur deleniti debitis... <a class="hover:text-teal-600" href="#">View More</a></p>
+                    </div>
+                </section>
+
+                <!-- card 3 -->
+                <section class="bg-white rounded border-2 rounded-2xl p-4 shadow-teal-600/30">
+                    <header class="border-b-2 border-slate-400 pb-2 mb-1">
+                        <div class="flex items-center mb-4">
+                            <!-- profile -->
+                            <img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of User"> 
+                            <h2 class="text-2xl">Daisuke Sato</h2>
+                        </div>
+                        
+                        <ul class="flex gap-x-2.5 grow">
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Reply</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Forward</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-red-300 hover:bg-red-500" " href="#">Delete</a></li>
+                        </ul>
+                    </header>
+                    <p class="text-gray-500 mb-4">Date: October 15, 2022</p>
+                    <div class="border-2 rounded-xl p-3 mb-3">
+                        <h3><strong>Subject: </strong>Hey! Here are my contributions.</h3>
+                    </div>
+                    <div class="border-2 rounded-xl p-3">
+                        <p><strong>Message: </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sint similique consectetur deleniti debitis... <a class="hover:text-teal-600" href="#">View More</a></p>
+                    </div>
+                </section>
+
+                <!-- card 4 -->
+                <section class="bg-white rounded border-2 rounded-2xl p-4 shadow-teal-600/30">
+                    <header class="border-b-2 border-slate-400 pb-2 mb-1">
+                        <div class="flex items-center mb-4">
+                            <!-- profile -->
+                            <img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/400" alt="Avatar of User"> 
+                            <h2 class="text-2xl">Klouie Anne</h2>
+                        </div>
+                        
+                        <ul class="flex gap-x-2.5 grow">
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Reply</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-teal-300 hover:bg-teal-500" href="#">Forward</a></li>
+                            <li class="leading-3 border-t-1 border-cyan-300"><a class="block py-1 px-1 tracking-wider rounded hover:ring-1 hover:ring-red-300 hover:bg-red-500" " href="#">Delete</a></li>
+                        </ul>
+                    </header>
+                    <p class="text-gray-500 mb-4">Date: October 29, 2022</p>
+                    <div class="border-2 rounded-xl p-3 mb-3">
+                        <h3><strong>Subject: </strong>Trying to set a meeting.</h3>
+                    </div>
+                    <div class="border-2 rounded-xl p-3">
+                        <p><strong>Message: </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sint similique consectetur deleniti debitis... <a class="hover:text-teal-600" href="#">View More</a></p>
+                    </div>
+                </section>
+
+
+            
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
